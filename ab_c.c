@@ -11,20 +11,20 @@ int cha_print = 0;
 switch (*format)
 {
 	case 'c':
-		cha_print += _putchar(va_arg(list_of_args, int));
-		break;
+	cha_print += _putchar(va_arg(list_of_args, int));
+	break;
 	case 's':
-		cha_print += _print_string(va_arg(list_of_args, char *));
-	       break;
+	cha_print += _print_string(va_arg(list_of_args, char *));
+	break;
 	case '%':
-	       cha_print += _putchar('%');
-	       break;
+	cha_print += _putchar('%');
+	break;
 	case '\0':
-	       return (-1);
+	return (-1);
 	default:
-	       cha_print += _putchar('%');
-	       cha_print += write(1, &(*format),1);
+	cha_print += _putchar('%');
+	cha_print += write(1, &(*format), 1);
 		break;
-}
-return (cha_print);
+	}
+	return (cha_print);
 }
